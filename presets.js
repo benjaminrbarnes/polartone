@@ -23,17 +23,17 @@ module.exports = [
     alpha: 0.1,
     extent: 0.65,
     seek: 60,
-    position: [0, -3.5, 0],
+    position: [0, 2, 0],
     url: 'https://soundcloud.com/erasedtapes/rival-consoles-recovery'
   },
-  {
-    capacity: 1000,
-    distance: 0.1,
-    alpha: 0.2,
-    extent: 0.25,
-    position: [0, 3.5, 0],
-    url: 'https://soundcloud.com/kartell/sg-lewis-no-less-kartell-remix-1'
-  },
+  // {
+  //   capacity: 1000,
+  //   distance: 0.1,
+  //   alpha: 0.2,
+  //   extent: 0.25,
+  //   position: [0, 3.5, 0],
+  //   url: 'https://soundcloud.com/kartell/sg-lewis-no-less-kartell-remix-1'
+  // },
   // {
   //   capacity: 400,
   //   distance: 0.2,

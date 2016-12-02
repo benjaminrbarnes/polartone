@@ -29,7 +29,7 @@ if (!AudioContext) {
 } else {
   global.load = loadTrack
   loadTrack()
-  printOptions()
+  // printOptions()
 }
   
 function loadTrack (opt) {
@@ -88,11 +88,20 @@ function startAudio (src, opt) {
   audio.crossOrigin = 'Anonymous'
   audio.addEventListener('canplay', once(() => {
     if (opt.seek) audio.currentTime = opt.seek
+    // renderTrack(audio, opt)
     renderTrack(audio, opt)
     audio.play()
   }))
   audio.src = src
   oldAudio = audio
+}
+
+function r(audio, opt){
+  const node = Analyser(audio, audioContext, { audible: true, stereo: false })
+  console.log(node);
+  const audioData = node.waveform()
+  const bufferLength = audioData.length
+  console.log(bufferLength) ;
 }
 
 function renderTrack (audio, opt) {
